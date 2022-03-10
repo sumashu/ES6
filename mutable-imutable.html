@@ -6,19 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body> 
+    <h1 style="color: purple">Mutable and immutable</h1>
     <script>
+        //Imutables
        let x=20;
        let y = x;
 
        y = x+1;
        document.write(y,"</br> </br>");
 
+       //mutables   (array and objects are mutable)
        let a = ['value1','value2','value3'];
-       let b = a;
+       //let b = a;  // it stores referance only
+       let b = [...a];   //this will give new location to b
        b.pop();
        document.write(a,"</br> </br>")
-       document.write(b)
+       document.write(b,"</br> </br>")
+
+       //to avoid this problem and getting new memory location we use spread oprator/ Concate
+
+       let sam = {
+           name: 'guru',
+           add: "nagpur"
+       }
+       let ashu = sam;
+       ashu.age = 20;
+        console.log(sam);
+        console.log(ashu);
+       document.write(sam,"</br> </br>");
+       document.write(ashu);
     </script>
 </body>
 </html>
