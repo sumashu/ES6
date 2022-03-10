@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: purple">Spred oprator</h1>
+    <script>
+        //spread operator with arrays
+        const team1 = ['usr1','user2'];
+        const team2 = ['usr3','user4','user5'];
+        const team3 = ['usr6','user7','user8'];
+        const newteam = [...team1,...team2,...team3];  //user spred when to concate more that two arrays.
+        document.write(newteam,"<br><br>");
+
+        const teamcenter = "teamcenterdi"
+       const newteam1=newteam.concat(teamcenter); //use concate in need add string  only
+       document.write(newteam1,"</br></br>");
+
+       //spred oprator with objext
+
+       let emp = {
+           name: "sumit",
+           job : "developer"
+       } 
+
+       let personal = {
+           age:20
+       }
+
+       let alldetails = {...emp,...personal}
+       let newemp = {...emp}
+       console.log(newemp);
+       console.log(emp);
+       console.log(alldetails);
+
+       //spred oprator with functions
+
+       const scoreList = [10,12,13,6,7,8,8];
+       document.write(Math.min(...scoreList));
+
+
+
+    </script>
+</body>
+</html>
