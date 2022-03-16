@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let emplaoyee = {
+            firstname:'sumit',
+            lastname:'pote',
+            getfullname:function(city,dev){
+                document.write(`my fullname is ${this.firstname} ${this.lastname} <br>`);
+                document.write(`this city is ${city} and designation is ${dev}<br>`);
+            }
+        }
+
+         let customer = {
+            firstname: 'ashwini',
+            lastname: 'pote'
+         }
+  
+        emplaoyee.getfullname.call(customer, 'pune','developer');  //
+        
+        emplaoyee.getfullname.apply(customer, ['goa','develper']);
+
+         
+
+    </script>
+</body>
+</html>
