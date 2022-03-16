@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: purple">Deep and Shallow</h1>
+   
+   <script>
+    
+     var originalValue = 
+         { id:10, name:"sumit"}
+     var copiedValue =  originalValue;
+        //console.log(copiedValue)
+        //console.log(originalValue)          //this shallow copy it will store referece and it became mutable;
+        copiedValue.name = "ashwini";
+        console.log("below is mutabled (shallow copy)");
+       // console.log(copiedValue);
+       // console.log(originalValue) ;
+        
+        //converting to deep copy of orginalValue to became imutable
+
+        //using JSON.stringify but it will be usefull only if it dont have any function type 
+
+        let Orginal =  { id:10, name:"sumit"}
+     let Copied =  JSON.parse(JSON.stringify(Orginal));  
+         console.log(Orginal);
+        console.log(Copied) ;
+        console.log("below is immutabled (deep copy)");
+        Copied.name = "ashumit";
+        console.log(Orginal);
+        console.log(Copied) ;
+
+     // using assign method of objects
+     console.log("below is immutabled (deep copy) by using the assign function");
+      let Copied1 = Object.assign({},Orginal);
+      Copied1.name = "ashumit";
+      console.log(Orginal);
+        console.log(Copied) ;
+
+
+
+       
+   </script> 
+</body>
+</html>

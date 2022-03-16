@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       const employee = {
+            fname:'john',
+            lname:'deer',
+            address:{
+                city:'pune',
+                state:'maha'
+            }
+        }
+        document.write(`this is older way for accessing : ${employee.address.city} <br>`)
+
+        //now we use destruction to access same employee
+
+        const {fname,lname,address:{city},age=10} = employee;
+        
+
+        document.write(`this is Destucring : ${lname} <br>`)
+        document.write(`this is Destucring : ${city} <br>`)
+    </script>
+</body>
+</html>

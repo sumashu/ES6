@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: purple">map filter</h1>
+<script>
+      // use of map  (modified length is same)
+       let users = ['sumit','ashish','ashwini'];
+        let modifieduser = users.map(values => values.toUpperCase()); // in map whatever transform or wahtever you do orignal length will stay same
+       document.write (modifieduser,"</br> </br>");   // 
+        let numbers = [1,23,5,6,7,8,9,11];
+        sum = 0
+        numbers.map(d=> sum+=d);
+           console.log (sum);
+
+           let users2 = [
+               {id:101, name:'sumit'},
+               {id:102, name:'ashwini'},
+            ]
+            //with map
+          let userList = users2.map(user=> user.name);
+           document.write(userList,"</br> </br>");
+           // with for each
+           let getid = [];
+           users2.forEach(user=>getid.push(user.id));
+           document.write(getid,"</br> </br>");
+
+           document.write("Filter function starts here please check console <br><br>");
+
+           //filter
+
+           const employe=[
+               {empid:101, name:'sumit', role:'designer', salary:1000},
+               {empid:102, name:'amit', role:'develper', salary:500},
+               {empid:103, name:'nikhil', role:'designer', salary:700},
+               {empid:104, name:'ashu', role:'develper', salary:800},
+                {empid:105, name:'nitin', role:'develper', salary:1000}
+            ]
+            //this is filter 
+            const empdes = employe.filter(emp=>emp.role==="designer");
+            const empsal = employe.filter(emp=>emp.salary===500);
+            console.log(empdes);
+            console.log(empsal);
+
+            //reduce
+            document.write("reduce function starts here <br><br>");
+            const scrore = [10,6,6,6,6,6,6,6,66,6,6,6,6];
+
+            var total= scrore.reduce((accumulator,sum)=>{return accumulator+sum},0);
+
+            document.write(total);
+               
+         
+</script>    
+</body>
+</html>
